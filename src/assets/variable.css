@@ -1,0 +1,22 @@
+:root {
+  --primary:#5CB85C;
+  --primaryBackground: #F5F5F4;
+  --secondaryBackground: #FFFFFF;
+  --colorBorder: #CCCDCE;
+  --primaryText:#000000;
+  --secondaryText: #FFFFFF;
+  --colorTableBorder: #D8D8D8;
+  --colorPaginationBackground: #E8FFE3;
+  --colorPagingationBorder: #74B566;
+  --primaryButtonBackground: #E1E1E1;
+  --primaryButtonBorder: #A3A3A3;
+  --primaryButtonText: #000000;
+  --successButtonBackground: #5CB85C;
+  --successButtonBorder: #009100;
+  --successButtonText: #FFFFFF;
+  --textSm: 12px;
+  --TextBase: 14px;
+  --fontNormal: 400;
+  --fontMedium: 500;
+  --fontSamibold: 600;
+}

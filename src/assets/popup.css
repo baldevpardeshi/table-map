@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+.popup{
+  @apply relative text-left overflow-hidden shadow-xl transform transition-all max-w-xs sm:max-w-xl	lg:max-w-5xl w-full sm:my-8;
+  background-color: var(--primaryBackground);
+  font-family: 'Open Sans', sans-serif;
+}
+.button-primary{
+  @apply leading-6 rounded-sm px-2;
+  background-color: var(--primaryButtonBackground);
+  border: 1px solid var(--primaryButtonBorder);
+  font-size: var(--TextBase);
+  color: var(--primaryButtonText);
+}
+.button-success{
+  @apply leading-6 rounded-sm px-2;
+  background-color: var(--successButtonBackground);
+  border: 1px solid var(--successButtonBorder);
+  font-size: var(--TextBase);
+  color: var(--successButtonText);
+}
+/* ----------- Header css start here ----------- */
+.header{
+  @apply flex items-center justify-between px-2.5 py-2;
+  background-color: var(--primary);
+  color: var(--secondaryText);
+}
+.header__name{
+  @apply text-left leading-6;
+  font-size: var(--TextBase);
+  font-weight: var(--fontSamibold);
+}
+.header__close{
+  @apply rounded-full flex items-center justify-center h-5 w-5;
+  border: 2px solid var(--secondaryBackground);
+  color: var(--secondaryBackground);
+  font-size: var(--textSm);
+  font-weight: var(--fontSamibold);
+}
+/* ----------- Header css end here ----------- */
+/* ----------- Tabs css start here ----------- */
+.tabs{
+  @apply border-b-2;
+  border-color: var(--primary);
+}
+.tabs__nav{
+  @apply -mb-px flex justify-end pt-5 px-2.5;
+}
+.tabs__tab{
+  @apply whitespace-nowrap border-b-2 text-sm px-2.5 py-1.5;
+  color: var(--secondaryText);
+  background-color: var(--primary);
+  border-right: 2px solid var(--colorTableBorder);
+}
+.tabs__tab:last-child{
+  @apply border-r-0;
+}
+.tabs__tab-hover{
+  @apply whitespace-nowrap border-b-2 text-sm px-2.5 py-1.5;
+  color: var(--secondaryText);
+  background-color: var(--primary);
+  border-color: transparent;
+}
+.tabs__tab-active{
+  background-color: var(--secondaryBackground);
+  color: var(--primary);
+
+}
+/* ----------- Tabs css end here ----------- */
+/* ----------- Table css start here ----------- */
+.table__heading{
+  @apply leading-6 pt-3.5;
+  color: var(--primary);
+  font-size: var(--TextBase);
+  font-weight: var(--fontSamibold);
+}
+.table .form__label{
+  @apply w-8;
+}
+.table .form__input{
+  @apply w-48 md:w-64;
+}
+/* ----------- Table css end here ----------- */
+/* ----------- Form css start here ----------- */
+.form{
+  @apply pt-3.5;
+}
+.form-section{
+  border-left: 1px solid var(--colorBorder);
+}
+.form__label{
+  @apply w-24;
+  font-size: var(--textSm);
+  color: var(primaryText);
+}
+.form__input{
+  @apply rounded-sm;
+  background-color: var(--secondaryBackground);
+  border: 1px solid var(--colorBorder);
+}
+/* ----------- Form css end here ----------- */
+/* ----------- Footer css start here ----------- */
+.footer{
+  @apply p-2.5 flex items-center justify-between leading-5;
+  font-size: var(--textSm);
+  color: var(--primaryText);
+}
+.footer__pagination-button{
+  @apply w-6 h-5 rounded-sm flex items-center justify-center;
+  background-color: var(--colorPaginationBackground);
+  border: 1px solid var(--primaryButtonBorder);
+}
+/* ----------- Footer css end here ----------- */

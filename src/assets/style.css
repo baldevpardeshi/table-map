@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import "./variable.css";
+
+  a {
+    @apply no-underline;
+  }
+}
+
+@import "./popup.css";
