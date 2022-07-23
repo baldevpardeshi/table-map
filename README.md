@@ -1,6 +1,9 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was maid in tailwind take clone from https://github.com/baldevpardeshi/table-map
+
+## For NPM packages
+npm install
 
 ## Available Scripts
 
