@@ -115,7 +115,7 @@ const Table = () => {
   }
 
   return (
-    <div className="table">
+    <div className="table-section">
       <div>
         <h2 className="table__heading">Immunization Alerts</h2>
         <div className="flex items-center justify-between py-2.5">
@@ -142,25 +142,25 @@ const Table = () => {
           </button>
         </div>
       )}
-      <table className="min-w-full table-fixed divide-y divide-gray-300">
-        <thead className="bg-gray-50">
+      <table className="table">
+        <thead className="table__head">
           <tr>
-            <th scope="col" className="relative w-12 px-6 sm:w-16 sm:px-8">
+            <th scope="col" className="relative px-2.5 py-2">
               <input
                 type="checkbox"
-                className="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6"
+                className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6"
                 ref={checkbox}
                 checked={checked}
                 onChange={toggleAll}
               />
             </th>
-            <th scope="col" className="min-w-[12rem] py-3.5 pr-3 text-left text-sm font-semibold text-gray-900">
+            <th scope="col" className="min-w-[12rem] px-2.5 py-2 text-left text-sm font-semibold">
               Name
             </th>
-            <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+            <th scope="col" className="px-2.5 py-2 text-left text-sm font-semibold">
               Description
             </th>
-            <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+            <th scope="col" className="px-2.5 py-2 text-left text-sm font-semibold">
               Web Reference
             </th>
           </tr>
@@ -168,13 +168,13 @@ const Table = () => {
         <tbody className="divide-y divide-gray-200 bg-white">
           {people.map((person) => (
             <tr key={person.email} className={selectedPeople.includes(person) ? 'bg-gray-50' : undefined}>
-              <td className="relative w-12 px-6 sm:w-16 sm:px-8">
+              <td className="relative px-2.5 py-1">
                 {selectedPeople.includes(person) && (
-                  <div className="absolute inset-y-0 left-0 w-0.5 bg-indigo-600" />
+                  <div className="absolute inset-y-0 left-0 w-0.5 bg-green-500" />
                 )}
                 <input
                   type="checkbox"
-                  className="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 sm:left-6"
+                  className=" h-4 w-4 rounded border-gray-300 text--green-500 focus:ring-green-500 sm:left-6"
                   value={person.email}
                   checked={selectedPeople.includes(person)}
                   onChange={(e) =>
@@ -188,14 +188,14 @@ const Table = () => {
               </td>
               <td
                 className={classNames(
-                  'whitespace-nowrap py-4 pr-3 text-sm font-medium',
-                  selectedPeople.includes(person) ? 'text-indigo-600' : 'text-gray-900'
+                  'whitespace-nowrap px-2.5 py-1 table__text',
+                  selectedPeople.includes(person) ? 'text-green-500' : 'text-black'
                 )}
               >
                 {person.name}
               </td>
-              <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{person.description}</td>
-              <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{person.webReference}</td>
+              <td className="whitespace-nowrap px-2.5 py-1 table__text">{person.description}</td>
+              <td className="whitespace-nowrap px-2.5 py-1 table__text">{person.webReference}</td>
             </tr>
           ))}
         </tbody>

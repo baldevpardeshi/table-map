@@ -13,7 +13,7 @@ function classNames(...classes) {
 const Tabs = () => {
   return(
     <div>
-      <div className="sm:hidden">
+      <div className="sm:hidden px-2.5 pt-2.5">
         <label htmlFor="tabs" className="sr-only">
           Select a tab
         </label>
@@ -32,21 +32,23 @@ const Tabs = () => {
       <div className="hidden sm:block">
         <div className="tabs">
           <nav className="tabs__nav" aria-label="Tabs">
-            {tabs.map((tab) => (
-              <a
-                key={tab.name}
-                href={tab.href}
-                className={classNames(
-                  tab.current
-                    ? 'tabs__tab-active'
-                    : 'tabs__tab-hover',
-                      'tabs__tab'
-                )}
-                aria-current={tab.current ? 'page' : undefined}
-              >
-                {tab.name}
-              </a>
-            ))}
+            <div className="tabs__item-wrapper">
+              {tabs.map((tab) => (
+                <a
+                  key={tab.name}
+                  href={tab.href}
+                  className={classNames(
+                    tab.current
+                      ? 'tabs__tab-active'
+                      : 'tabs__tab-hover',
+                        'tabs__tab'
+                  )}
+                  aria-current={tab.current ? 'page' : undefined}
+                >
+                  {tab.name}
+                </a>
+              ))}
+            </div>
           </nav>
         </div>
       </div>

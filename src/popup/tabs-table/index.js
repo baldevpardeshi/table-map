@@ -5,7 +5,7 @@ const TabsTable = () => {
   return (
     <>
       <Tabs />
-      <div className="flex">
+      <div className="flex flex-col md:flex-row">
         <div className="px-2.5">
           <Table />
         </div>

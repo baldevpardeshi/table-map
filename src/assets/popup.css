@@ -43,10 +43,14 @@
   border-color: var(--primary);
 }
 .tabs__nav{
-  @apply -mb-px flex justify-end pt-5 px-2.5;
+  @apply flex justify-end pt-5 px-2.5;
+}
+.tabs__item-wrapper{
+  @apply -mb-px flex rounded-t-md overflow-hidden;
+  background-color: var(--primary);
 }
 .tabs__tab{
-  @apply whitespace-nowrap border-b-2 text-sm px-2.5 py-1.5;
+  @apply whitespace-nowrap border-2 text-sm px-2.5 py-1.5;
   color: var(--secondaryText);
   background-color: var(--primary);
   border-right: 2px solid var(--colorTableBorder);
@@ -55,16 +59,20 @@
   @apply border-r-0;
 }
 .tabs__tab-hover{
-  @apply whitespace-nowrap border-b-2 text-sm px-2.5 py-1.5;
+  @apply whitespace-nowrap border-2 text-sm px-2.5 py-1.5;
   color: var(--secondaryText);
   background-color: var(--primary);
   border-color: transparent;
+  border-right: 2px solid var(--colorTableBorder);
 }
 .tabs__tab-active{
+  @apply rounded-t-md;
   background-color: var(--secondaryBackground);
   color: var(--primary);
-
+  border-color: var(--primary);
+  border-bottom: var(--secondaryBackground);
 }
+
 /* ----------- Tabs css end here ----------- */
 /* ----------- Table css start here ----------- */
 .table__heading{
@@ -73,11 +81,30 @@
   font-size: var(--TextBase);
   font-weight: var(--fontSamibold);
 }
-.table .form__label{
+.table-section{
+  @apply overflow-x-scroll
+}
+.table-section .form__label{
   @apply w-8;
 }
-.table .form__input{
+.table-section .form__input{
   @apply w-48 md:w-64;
+}
+.table{
+  border: 1px solid var(--colorBorder);
+}
+.table__head{
+  background: var(--primary);
+  color: var(--secondaryText);
+}
+.table tr th,
+.table tr td{
+  border: 1px solid var(--colorBorder);
+}
+.table__text{
+  line-height: 1;
+  font-size: var(--textXs);
+  color: var(--primaryText);
 }
 /* ----------- Table css end here ----------- */
 /* ----------- Form css start here ----------- */
@@ -100,7 +127,7 @@
 /* ----------- Form css end here ----------- */
 /* ----------- Footer css start here ----------- */
 .footer{
-  @apply p-2.5 flex items-center justify-between leading-5;
+  @apply p-2.5 flex items-center justify-between leading-5 flex-col md:flex-row gap-2.5;
   font-size: var(--textSm);
   color: var(--primaryText);
 }
